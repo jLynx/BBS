@@ -1,5 +1,14 @@
 # BBS for RatOS
-Belt Balance System RatOS
+Belt Balance System RatOS.
+
+Based off of @JupaCreations Belt-Balance-System https://github.com/JupaCreations/Belt-Balance-System
+
+ToDo:
+- Fix the Python script so its not utter dogshit
+- Upload build guide
+- Upload PCB files
+- Upload photos
+- Upload BOM
 
 # 1. Install
 SSH into your Raspberry PI and execute:
