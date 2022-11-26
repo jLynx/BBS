@@ -6,6 +6,8 @@ This is based off of [@JupaCreations](https://github.com/JupaCreations) awesome 
 
 Due to the current limitations of Klipper/Mainsail, we have to show the two belts values as temprature values in the temperature section of Mainsail as there is currently no other way to display them.
 This is something I hope to solve in the near future.
+
+
 ![image](https://user-images.githubusercontent.com/4393979/204072831-92d98250-9b7d-4344-afd7-fa5844e6aff5.png)
 
 
