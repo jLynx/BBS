@@ -15,6 +15,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 KLIPPER_CONFIG_DIR="${HOME}/klipper_config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
 CONFIG_DIR="${HOME}/klipper_config/bbs"
+PYTHONDIR="${HOME}/klippy-env"
 
 function stop_klipper {
     if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
@@ -66,6 +67,12 @@ function link_extra {
     fi
 }
 
+function install_pip_dependencies()
+{
+    # Install dependencies
+    ${PYTHONDIR}/bin/pip install requests
+}
+
 ### MAIN
 
 # Parse command line arguments
@@ -96,6 +103,7 @@ stop_klipper
 create_config_dir
 link_config
 link_extra
+install_pip_dependencies
 start_klipper
 echo -e "Installation finished!"
 echo -e ""
