@@ -14,7 +14,7 @@ SRCDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )"/ && pwd )"
 # Default Parameters
 KLIPPER_CONFIG_DIR="${HOME}/klipper_config"
 KLIPPY_EXTRAS="${HOME}/klipper/klippy/extras"
-MACRO_DIR="${HOME}/klipper_config/bbs"
+CONFIG_DIR="${HOME}/klipper_config/bbs"
 
 function stop_klipper {
     if [ "$(sudo systemctl list-units --full -all -t service --no-legend | grep -F "klipper.service")" ]; then
@@ -30,11 +30,11 @@ function start_klipper {
 }
 
 function create_config_dir {
-    if [ -d "${MACRO_DIR}" ]; then
-        rm -rf "${MACRO_DIR}"
+    if [ -d "${CONFIG_DIR}" ]; then
+        rm -rf "${CONFIG_DIR}"
     fi
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
-        mkdir "${MACRO_DIR}"
+        mkdir "${CONFIG_DIR}"
     else
         echo -e "ERROR: ${KLIPPER_CONFIG_DIR} not found."
         exit 1
@@ -43,11 +43,11 @@ function create_config_dir {
 
 function link_config {
     if [ -d "${KLIPPER_CONFIG_DIR}" ]; then
-        if [ -d "${MACRO_DIR}" ]; then
-            rm -f "${MACRO_DIR}/bbs.cfg"
-            ln -sf "${SRCDIR}/config/bbs.cfg" "${MACRO_DIR}/bbs.cfg"
+        if [ -d "${CONFIG_DIR}" ]; then
+            rm -f "${CONFIG_DIR}/bbs.cfg"
+            ln -sf "${SRCDIR}/config/bbs.cfg" "${CONFIG_DIR}/bbs.cfg"
         else
-            echo -e "ERROR: ${MACRO_DIR} not found."
+            echo -e "ERROR: ${CONFIG_DIR} not found."
             exit 1
         fi
     else
