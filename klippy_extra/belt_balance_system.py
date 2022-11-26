@@ -38,8 +38,6 @@ class BeltBalanceSystem:
         try:
             response = requests.get("http://192.168.1.203/weight")
             values = response.content.split(",")
-            logging.exception(self.belt_number)
-            logging.exception(self.belt_number - 1)
             self.temp = float(values[int(self.belt_number - 1)])
         except Exception:
             logging.exception("belt_balance_system: Error reading data")
