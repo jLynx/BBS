@@ -1,7 +1,11 @@
 # BBS for RatOS
 Belt Balance System RatOS.
+This gives you the exact measurement for each belt in grams so you can more easily fine tune your printer.
 
-Based off of [@JupaCreations](https://github.com/JupaCreations) awesome [Belt Balance System](https://github.com/JupaCreations/Belt-Balance-System).
+This is based off of [@JupaCreations](https://github.com/JupaCreations) awesome [Belt Balance System](https://github.com/JupaCreations/Belt-Balance-System).
+
+Due to the current limitations of Klipper/Mainsail, we have to show the two belts values in the temperature section of Mainsail as there is currently no other way to display them.
+This is something I hope to solve in the near future.
 
 ToDo:
 - Fix the Python script so its not utter dogshit.
@@ -20,13 +24,13 @@ bash ~/BBS/install.sh
 ```
 
 # 2. Activate
-Add this to the overwrite section at the end of your printer.cfg file.
+Add this to the overwrite section at the end of your ``printer.cfg`` file.
 ```ini
 # BBS
 [include bbs/bbs.cfg]
 ```
 # 3. Update
-If you want to receive updates for BBS put this at the end of the moonraker.conf file.
+If you want to receive updates for BBS put this at the end of the ``moonraker.conf`` file.
 ```ini
 # BBS
 [update_manager BBS]
