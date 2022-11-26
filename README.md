@@ -1,14 +1,15 @@
 # BBS for RatOS
 Belt Balance System RatOS.
 
-Based off of @JupaCreations Belt-Balance-System https://github.com/JupaCreations/Belt-Balance-System
+Based off of [@JupaCreations](https://github.com/JupaCreations) awesome [Belt Balance System](https://github.com/JupaCreations/Belt-Balance-System).
 
 ToDo:
-- Fix the Python script so its not utter dogshit
-- Upload build guide
-- Upload PCB files
-- Upload photos
-- Upload BOM
+- Fix the Python script so its not utter dogshit.
+- Upload build guide.
+- Upload PCB files.
+- Upload photos.
+- Upload BOM.
+- Work out if the ESP8266/32 is needed for the current API, or if it can be done on a ATmega328P based micro via serial.
 
 # 1. Install
 SSH into your Raspberry PI and execute:
