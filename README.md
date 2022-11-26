@@ -6,7 +6,7 @@ SSH into your Raspberry PI and execute:
 ```
 cd ~/
 git clone https://github.com/jLynx/BBS.git
-bash ~/bbs/install.sh
+bash ~/BBS/install.sh
 ```
 
 # 2. Activate
@@ -22,7 +22,7 @@ If you want to receive updates for BBS put this at the end of the moonraker.conf
 [update_manager bbs]
 type: git_repo
 primary_branch: main
-path: ~/bba
+path: ~/bbs
 origin: https://github.com/jLynx/BBS.git
 is_system_service: False
 ```
