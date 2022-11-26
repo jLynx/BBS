@@ -19,10 +19,10 @@ Add this to the overwrite section at the end of your printer.cfg file.
 If you want to receive updates for BBS put this at the end of the moonraker.conf file.
 ```ini
 # BBS
-[update_manager bbs]
+[update_manager BBS]
 type: git_repo
 primary_branch: main
-path: ~/bbs
+path: ~/BBS
 origin: https://github.com/jLynx/BBS.git
 is_system_service: False
 ```
