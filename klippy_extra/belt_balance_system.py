@@ -3,6 +3,7 @@ import requests
 
 HOST_REPORT_TIME = 1.0
 
+
 class BeltBalanceSystem:
     def __init__(self, config):
         self.printer = config.get_printer()
