@@ -42,7 +42,7 @@ class BeltBalanceSystem:
         except Exception:
             logging.exception("belt_balance_system: Error reading data")
             self.temp = 0.0
-            return self.reactor.NEVER
+            # return self.reactor.NEVER # Commented out as causes print to fail if this module fails
 
         mcu = self.printer.lookup_object('mcu')
         measured_time = self.reactor.monotonic()
